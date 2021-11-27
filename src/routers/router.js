@@ -7,7 +7,7 @@ Vue.use(Router);
 
 
 
-import {adminLayoutRouter, adminDashboardRouter} from "./admin/layout";
+import {adminLayoutRouter, adminDashboardRouter,adminChildrenRouter} from "./admin/layout";
 
 const router = new Router({
     // mode: 'history',
@@ -23,9 +23,9 @@ const router = new Router({
             path: adminLayoutRouter.path,
             name: adminLayoutRouter.name,
             component: adminLayoutRouter.component,
-            // redirect: adminDashboardRouter,
+            redirect: adminDashboardRouter,
             // beforeEnter: requireAdminAuth,
-            // children: adminChildrenRouter,
+            children: adminChildrenRouter,
         }
     ]
 });

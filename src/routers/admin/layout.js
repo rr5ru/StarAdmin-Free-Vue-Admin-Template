@@ -9,8 +9,18 @@ const dashboard = {
 };
 
 
+const children = [
+    dashboard,
+/*    {
+        path: "/admin/table",
+        name: "admin-table",
+        component: () => import(/!* webpackChunkName: "admin-table" *!/ './../../admin/table/Example.vue'),
+    },*/
+];
+
 // export
 export {
     layout as adminLayoutRouter,
     dashboard as adminDashboardRouter,
+    children as adminChildrenRouter,
 }
